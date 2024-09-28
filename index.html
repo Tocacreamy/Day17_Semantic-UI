@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic UI Animation Example</title>
+    <!-- Tambahkan Semantic UI CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: #f4f4f9;
+      }
+
+      nav.ui.segment {
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.5s ease-in-out;
+      }
+
+      /* Efek hover pada menu */
+      .menu.list .item:hover {
+        background-color: rgba(0, 162, 255, 0.1);
+        color: #00a2ff !important;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Efek hover pada card */
+      .ui.card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        transition: transform 0.5s, box-shadow 0.5s;
+      }
+
+      footer {
+        padding: 20px;
+        text-align: center;
+        background: #222;
+        color: #f4f4f9;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="ui segment"
+      style="
+        position: fixed;
+        background-color: rgb(255, 255, 255);
+        z-index: 1000;
+        width: 100%;
+      "
+    >
+      <div class="ui secondary menu list container">
+        <h3 class="ui teal header item relaxed">Toca Creamy</h3>
+        <div class="right menu list">
+          <div class="right menu">
+            <a href="#home" class="item">Home</a>
+            <a href="#about" class="item">About</a>
+            <a href="#portofolio" class="item">Portfolio</a>
+            <a href="#sosmed" class="item">Social Media</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="ui grid">
+      <section
+        class="sixteen wide column"
+        id="home"
+        style="
+          background: rgb(9, 120, 121);
+          background: linear-gradient(
+            90deg,
+            rgba(9, 120, 121, 1) 0%,
+            rgba(3, 54, 58, 1) 31%,
+            rgba(3, 54, 58, 1) 66%,
+            rgba(9, 120, 121, 1) 100%
+          );
+        "
+      >
+        <div
+          class="ui very padded center aligned container"
+          style="
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          "
+        >
+          <h2
+            style="
+              text-shadow: 0px 2px 40px rgba(0, 255, 238, 0.525);
+              font-size: 60px;
+              color: white;
+            "
+          >
+          Toca's Page
+          </h2>
+          <p
+            style="
+              text-shadow: 0px 2px 40px rgba(0, 255, 238, 0.525);
+              color: white;
+            "
+          >
+          Welcome to my personal portfolio! Here, you can learn more about my journey as a passionate developer and designer. I love creating interactive and visually appealing user experiences. Scroll down to see my skills, projects, and how to get in touch.
+          </p>
+          <button class="ui teal button center aligned" id="learn-more" style="width: 20%; align-self: center;">Learn More</button>
+        </div>
+      </section>
+      <section
+        class="sixteen wide column"
+        id="about"
+        style="height: 400px; display: flex; flex-direction: column; margin: auto; padding-top: 80px;"
+      >
+        <div class="ui very padded center aligned container">
+          <div class="ui grid left aligned">
+            <div class="eight wide column left aligned">
+              <img
+                src="https://images.pexels.com/photos/6593238/pexels-photo-6593238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+                style="width: auto; height: 300px; border-radius: 100px 10px;"
+              />
+            </div>
+            <div class="six wide column">
+              <h2
+                class="ui left aligned container huge header"
+                style="color: darkturquoise;"
+              >
+                About
+              </h2>
+              <p class="ui left aligned container">
+                Hello! I’m a passionate Front-End Developer with experience in building dynamic and responsive web applications. My main focus is on creating beautiful and user-friendly interfaces using HTML, CSS, JavaScript, and modern frameworks. I’m always exploring new technologies and improving my skills to deliver high-quality products that provide a great user experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="ui sixteen wide column"
+        style="background-color: ghostwhite;"
+        id="portofolio"
+      >
+        <div
+          class="ui very padded center aligned container"
+          style="height: 500px; display: flex; flex-direction: column; margin-top: 50px;"
+        >
+          <h2 class="ui huge header" style="color: darkturquoise;">
+            Portfolio
+          </h2>
+
+          <div
+            class="ui grid center aligned"
+            style="
+              display: grid;
+              grid-auto-flow: column;
+              margin-top: 20px;
+              gap: 50px;
+            "
+          >
+            <div class="ui card" style="margin: auto;">
+              <div class="image">
+                <img
+                  src="https://images.pexels.com/photos/270632/pexels-photo-270632.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                />
+              </div>
+              <div class="content">
+                <a class="header">Front End Developer</a>
+                <div class="meta">
+                  <span class="date">2023</span>
+                </div>
+                <div class="description">
+                  Responsive landing page designed using HTML, CSS, and JavaScript. The focus was on creating a visually appealing design while ensuring the site remains accessible and performs well on various devices.
+                </div>
+              </div>
+            </div>
+
+            <div class="ui card" style="margin: auto;">
+              <div class="image">
+                <img
+                  src="https://images.pexels.com/photos/326502/pexels-photo-326502.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                />
+              </div>
+              <div class="content">
+                <a class="header">UIUX Designer</a>
+                <div class="meta">
+                  <span class="date">2022</span>
+                </div>
+                <div class="description ">
+                  A UI/UX design project that involved prototyping, wireframing, and user testing. The goal was to build an intuitive e-commerce platform with a modern, minimalistic design
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sixteen wide column" id="sosmed">
+        <div
+          class="ui padded center aligned container"
+          style="
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          "
+        >
+          <h2 style="color: darkturquoise;">Social Media</h2>
+          <p >
+             Let’s collaborate and bring great ideas to life!
+          </p>
+          <div class="ui" style="margin-top: 30px;">
+            <i class="github icon red"></i>
+            <a href="https://github.com/Tocacreamy" class="ui red ">Github</a> &nbsp;
+            &nbsp;
+            <i class="instagram icon red"></i>
+            <a href="" class="ui red ">Instagram</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <h5>Toca creamy 2024</h5>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  </body>
+</html>
